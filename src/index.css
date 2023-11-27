@@ -1,13 +1,59 @@
-body {
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css");
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding:0;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard Variable", Pretendard, Roboto, "Noto Sans KR", "Segoe UI", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  letter-spacing: -0.2px;
+}
+a{
+  text-decoration: none;
+  color:inherit
+}
+a:hover{
+  color:palevioletred;
+}
+body{
+  padding: 0 2%;
+}
+#root{
+  max-width: 1280px;
+  margin:0 auto;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.movies{
+  display: flex;
+  margin-top: 50px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap:50px;
+}
+.movies > li{
+  display: flex;
+  flex-basis: 45%;
+  border:1px solid #eeeeee;
+}
+.movies > li:hover{
+  box-shadow: 0 0 10px #dddddd;
+}
+.movieInfo{
+  padding:20px;
+}
+.movieInfo h2{
+  margin-bottom: 10px;
+}
+.genres{
+  display: flex;
+  gap: 4px;
+  margin-bottom: 30px;
+}
+.genres li{
+  padding: 3px 10px;
+  border:1px solid lavender;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+.genres li:hover{
+  background-color: lavender;
 }
