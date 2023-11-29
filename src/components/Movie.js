@@ -4,15 +4,17 @@ import styles from '../Movie.module.css';
 function Movie({coverImg, title, genres, summary, id}) {
   return(
       <li>
-        <img src={coverImg} alt={title}/>
+        <div className={styles.movieImg}>
+          <img src={coverImg} alt={title}/>
+        </div>
         <div className={styles.movieInfo}>
-        <h2><Link to={`/movie/${id}`}>{title}</Link></h2>
-        <ul className={styles.genres}>
-          {genres.map((g) =>(
-            <li>{g}</li>
-          ))}
-          </ul>
-        <p>{summary.length>235? `${summary.slice(0,235)}...`: summary}</p>
+          <h2><Link to={`/movie/${id}`}>{title}</Link></h2>
+          <ul className={styles.genres}>
+            {genres.map((g) =>(
+              <li>{g}</li>
+            ))}
+            </ul>
+          <p>{summary.length>100? `${summary.slice(0,100)}...`: summary}</p>
         </div>
       </li>
   )
